@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 /opt/system-monitor/system_monitor.py

@@ -1,0 +1,8 @@
+Package: system-monitor
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Ваше Имя <ваш-email@example.com>
+Description: Приложение для мониторинга загруженности системы в реальном времени.
+ Программа отображает загруженность CPU, RAM и диска, а также позволяет записывать данные в базу данных.

@@ -2,6 +2,7 @@ import tkinter as tk
 import psutil
 import sqlite3
 from datetime import datetime
+import os
 
 
 class SystemMonitorApp:
@@ -14,6 +15,14 @@ class SystemMonitorApp:
         self.update_interval = 1000  # в миллисекундах
         self.is_recording = False  # Флаг для отслеживания состояния записи
         self.start_time = None  # Время начала записи
+
+        # Указываем путь к файлу базы данных в домашней директории
+        home_dir = os.path.expanduser("~")
+        self.db_path = os.path.join(home_dir, "system_monitor.db")
+
+        # Подключение к базе данных
+        self.conn = sqlite3.connect(self.db_path)
+        self.create_table()
 
         # Создание и размещение виджетов
         self.cpu_label = tk.Label(root, text="Загруженность ЦП: N/A", font=("Arial", 12))
@@ -48,7 +57,7 @@ class SystemMonitorApp:
         self.timer_label.pack(pady=10)
 
         # Подключение к базе данных SQLite
-        self.conn = sqlite3.connect('system_monitor.db')
+        self.conn = sqlite3.connect('../../system_monitor.db')
         self.create_table()
 
         # Запуск обновления информации
