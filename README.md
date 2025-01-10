@@ -28,7 +28,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/ваш-username/system-monitor.git
+   git clone https://github.com/Odiosus/system-monitor.git
 
 1. Создайте виртуальное окружение и активируйте его:
    ```bash
