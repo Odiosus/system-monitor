@@ -75,3 +75,10 @@
 ## Структура проекта
 
 ![System Monitor Screenshot](structure.png)  
+
+## Установка приложения
+
+Скачайте установочный файл из [релиза](https://github.com/Odiosus/system-monitor/releases/tag/v1.0.0) и установите его:
+
+```bash
+sudo dpkg -i system-monitor.deb
